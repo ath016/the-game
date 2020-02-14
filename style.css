@@ -1,0 +1,56 @@
+body {
+	margin: 0px;
+	font: 24px Candara;
+	background: #F27405;
+}
+
+table {
+	width: 100%;
+	height: 100%;
+}
+
+td {
+	text-align: center;
+	background: #F29F05;
+	color: #591902;
+}
+
+.column {
+	float: left;
+	width: 25%;
+	padding-bottom: 32px;
+}
+
+ul {
+	list-style: none;
+	text-align: center;
+	padding: 0px;
+	margin: 0px;
+}
+
+li {
+	margin: 2px;
+	background: #F2D544;
+	color: #BF4904;
+}
+
+.input {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+
+button {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 25%;
+	font: 24px Candara;
+	border: none;
+	background: #F2D544;
+	color: #BF4904;
+}
+
+button:focus {
+	outline: none;
+}
