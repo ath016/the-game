@@ -9,9 +9,15 @@ table {
 	height: 100%;
 }
 
-td {
+td.avaliable {
 	text-align: center;
 	background: #F29F05;
+	color: #591902;
+}
+
+td.unavaliable {
+	text-align: center;
+	background: #591902;
 	color: #591902;
 }
 
