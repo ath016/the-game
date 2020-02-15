@@ -27,7 +27,7 @@ function toggleMat() {
 	} // end of else
 } // end of toggle play mat
 
-// add last element
+// add last element to list
 function addNumber(list, number) {
 	const last = document.createElement('li')
 	last.innerText = number;
@@ -43,19 +43,20 @@ function addNumber(list, number) {
 	historyPt++;
 } // end of add last element
 
+// subtract last number added to a list
 function subtractNumber() {
 	// check empty history
 	if(historyPt < 0) return;
 	// condition number
 	numbers[history[historyPt].number - 1].onclick = handleNumber;
-	numbers[history[historyPt].number - 1].style.background = '#F29F05';
+	numbers[history[historyPt].number - 1].classList.remove('unavaliable');
 	// remove list item
 	history[historyPt].list.lastChild.remove();
 	// descrese history
 	historyPt--;
 } // subtract number
 
-// handle number
+// handle number on the table
 function handleNumber() {
 	const listNumber = Number(focusList.lastChild.innerText);
 	const tableNumber = Number(this.innerText);
@@ -70,7 +71,7 @@ function handleNumber() {
 		addNumber(focusList, this.innerText);
 		toggleMat();
 		this.onclick = undefined;
-		this.style.background = '#591902';
+		this.classList.add('unavaliable');
 	} // end of if
 } // end of handle number
 
@@ -80,6 +81,7 @@ function init() {
 	table.style.display = 'none';
 	numbers.forEach((number) => {
 		number.onclick = handleNumber;
+		number.classList.add('avaliable');
 	});
 	
 	// add inital values
